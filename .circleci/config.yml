@@ -180,8 +180,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --update --no-cache ansible tar curl gzip openssh
-            pip install awscli
+            apk add --update --no-cache ansible tar curl gzip awscli
       - attach_workspace:
           at: ~/
       - run:
@@ -200,7 +199,6 @@ jobs:
             echo TYPEORM_USERNAME=$TYPEORM_USERNAME >> backend/.env
             cat backend/.env
             cd .circleci/ansible
-            ANSIBLE_HOST_KEY_CHECKING=False
             ansible-playbook -i inventory.txt configure-server.yml
       - persist_to_workspace:
           root: ~/
