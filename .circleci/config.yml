@@ -312,6 +312,8 @@ jobs:
           name: Install dependencies
           command: |
             apk add --update --no-cache curl aws-cli nodejs npm
+      - attach_workspace:
+          at: ~/
       - run:
           name: Backend Smoke Test
           command: |
