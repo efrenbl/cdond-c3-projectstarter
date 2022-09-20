@@ -1,3 +1,5 @@
 https://github.com/efrenbl/cdond-c3-projectstarter
 
-https://d34a2b66jz3g7o.cloudfront.net/#/employees
+http://d34a2b66jz3g7o.cloudfront.net/#/employees
+
+http://udapeople-59fbca9.s3-website-us-east-1.amazonaws.com/#/employees
